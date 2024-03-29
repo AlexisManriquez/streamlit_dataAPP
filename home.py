@@ -120,5 +120,5 @@ st.write('Center Prices')
 # Create a DataFrame from the center_prices list
 df_center_prices = pd.DataFrame(center_prices, columns=['Center Prices'])
 # Display the DataFrame
-st.dataframe(df_center_prices, use_container_width=)
+st.dataframe(df_center_prices, use_container_width=True)
 
