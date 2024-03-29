@@ -101,7 +101,7 @@ for i in range(1, days-1):
             line=dict(color='red', width=2),
             name=f'Point of Control (${center_prices[i-1]})',
         ))
-        if i == 27:
+        if i == days-2:
             x_values = pd.date_range(start=f'{year}-{month}-{i+1} 19:00:00', end=f'{year}-{month}-{i+2} 09:00:00', freq='15min')
             fig.add_trace(go.Scatter(
                 x=x_values,
