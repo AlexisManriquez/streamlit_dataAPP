@@ -119,10 +119,11 @@ st.plotly_chart(fig, use_container_width=True)
 st.write('Center Prices')
 # Create a DataFrame from the center_prices list
 df_center_prices = pd.DataFrame(center_prices, columns=['Center Prices'])
-# add a column displaying the date of the center price as the index
-df_center_prices['Date'] = pd.date_range(start=f'{year}-{month}-01', periods=len(center_prices), freq='D')
-# Set the date as the index
+# add a column displaying the date of the center price as the index the time should be 19:00:00 for all dates
+dates = pd.date_range(start=f'{year}-{month}-01 19:00:00', periods=len(center_prices), freq='D')
+df_center_prices['Date'] = dates
+# set the date as the index
 df_center_prices = df_center_prices.set_index('Date')
-# Display the DataFrame
+# display the DataFrame
 st.dataframe(df_center_prices, use_container_width=True)
 
