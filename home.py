@@ -117,5 +117,8 @@ st.plotly_chart(fig, use_container_width=True)
 
 # Display values from center_prices list to a nice markdown table
 st.write('Center Prices')
-st.write(pd.DataFrame(center_prices, columns=['Center Prices']).to_markdown(index=False))
+# Create a DataFrame from the center_prices list
+df_center_prices = pd.DataFrame(center_prices, columns=['Center Prices'])
+# Display the DataFrame
+st.dataframe(df_center_prices, use_container_width=)
 
