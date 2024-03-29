@@ -115,3 +115,5 @@ fig.update_layout(showlegend=False)
 st.title('MATICUSDT Analysis')
 st.plotly_chart(fig, use_container_width=True)
 
+# Display center prices in a nice format
+st.write('Center Prices')
