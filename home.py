@@ -115,5 +115,7 @@ fig.update_layout(showlegend=False)
 st.title('MATICUSDT Analysis')
 st.plotly_chart(fig, use_container_width=True)
 
-# Display center prices in a nice format
+# Display values from center_prices list to a nice markdown table
 st.write('Center Prices')
+st.write(pd.DataFrame(center_prices, columns=['Center Prices']).to_markdown(index=False))
+
