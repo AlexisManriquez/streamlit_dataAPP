@@ -50,7 +50,7 @@ if __name__ == '__main__':
     df_copy.rename(columns={'open_time': 'time'}, inplace=True)
     df_spot = df_spot.set_index('open_time')
     st.title('MATICUSDT Analysis')
-    chart = StreamlitChart(width=900, height=600)
+    chart = StreamlitChart(width=900, height=600,toolbox=True)
     chart.set(df_copy)
     chart.precision(4)
     for i in range(1, days-1):
