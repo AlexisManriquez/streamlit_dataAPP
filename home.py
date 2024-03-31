@@ -63,13 +63,13 @@ if __name__ == '__main__':
                 x_values = pd.date_range(start=f'{year}-{month}-{i} 19:00:00', end=f'{year}-{month}-{i+1} 09:00:00', freq='15min')
             POC_list.extend([[row, center_prices[i-1]] for row in x_values])
             POC_df = pd.DataFrame(POC_list, columns=['time', f'{year}-{month}-{i+1} POC'])
-            line = chart.create_line(name=f'{year}-{month}-{i+1} POC', color='red', price_label=False, price_line=False)
+            line = chart.create_line(name=f'{year}-{month}-{i+1} POC', color='red', price_label=False, price_line=True)
             line.set(POC_df)
             if i == days-2:
                 POC_list = []
                 x_values = pd.date_range(start=f'{year}-{month}-{i+1} 19:00:00', end=f'{year}-{month}-{i+2} 09:00:00', freq='15min')
                 POC_list.extend([[row, center_prices[-1]] for row in x_values])
                 POC_df = pd.DataFrame(POC_list, columns=['time', f'{year}-{month}-{i+2} POC'])
-                line = chart.create_line(name=f'{year}-{month}-{i+2} POC', color='red', price_label=False, price_line=False)
+                line = chart.create_line(name=f'{year}-{month}-{i+2} POC', color='red', price_label=False, price_line=True)
                 line.set(POC_df)
     chart.load()
