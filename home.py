@@ -2,12 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
-import plotly.express as px
-import plotly.graph_objects as go
 import numpy as np
-from datetime import datetime
 from lightweight_charts.widgets import StreamlitChart
 if __name__ == '__main__':
     month ="02"
